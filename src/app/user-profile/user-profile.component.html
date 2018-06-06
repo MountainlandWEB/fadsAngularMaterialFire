@@ -1,3 +1,71 @@
-<p>
-  user-profile works!
-</p>
+<div *ngIf="user" class="profileCard">
+  <mat-card class="example-card">
+
+
+    <mat-card-content>
+      <mat-card-header>
+        <h1>Welcome, {{user.first_name}}</h1>
+      </mat-card-header>
+      <form class="example-form">
+
+        <table class="example-full-width" cellspacing="0"><tr>
+          <td><mat-form-field class="example-full-width">
+            <input matInput  placeholder="First name" [(ngModel)] = "user.first_name" name="first">
+          </mat-form-field></td>
+          <td><mat-form-field class="example-full-width">
+            <input matInput  placeholder="Last Name" [(ngModel)] = "user.last_name" name="last">
+          </mat-form-field></td>
+        </tr></table>
+
+        <p>
+          <mat-form-field class="example-full-width">
+            <input matInput  placeholder="Address" [(ngModel)] = "user.address" name="address">
+          </mat-form-field>
+        </p>
+
+        <table class="example-full-width" cellspacing="0"><tr>
+          <td><mat-form-field class="example-full-width">
+            <input matInput  placeholder="City" [(ngModel)] = "user.city" name="city">
+          </mat-form-field></td>
+          <td><mat-form-field class="example-full-width">
+            <input matInput  placeholder="State" [(ngModel)] = "user.state" name="state">
+          </mat-form-field></td>
+          <td><mat-form-field class="example-full-width">
+            <input matInput  placeholder="Postal Code" [(ngModel)] = "user.zipcode" name="zipcode">
+            </mat-form-field></td>
+        </tr></table>
+      </form>
+    </mat-card-content>
+
+  </mat-card>
+</div>
+<!--<div *ngIf="user" class="homeCard">-->
+  <!--<mat-card>-->
+    <!--<mat-card-title>Welcome, {{user.givenName}}</mat-card-title>-->
+    <!--<mat-card>-->
+      <!--<mat-card-title>Your current contact information:</mat-card-title>-->
+      <!--<mat-card-subtitle>This is the contact information that customers will see.</mat-card-subtitle>-->
+      <!--<div>-->
+        <!--<mat-form-field class="formPadding">-->
+          <!--<input matInput placeholder="First" [(ngModel)] = "user.givenName" type="text">-->
+        <!--</mat-form-field>-->
+        <!--<mat-form-field class="formPadding">-->
+          <!--<input matInput placeholder="Last" [(ngModel)] = "user.familyName" type="text">-->
+        <!--</mat-form-field>-->
+      <!--</div>-->
+      <!--<div>-->
+        <!--<mat-form-field class="formPadding">-->
+          <!--<input matInput placeholder="Phone" [(ngModel)] = "user.phone" type="text">-->
+        <!--</mat-form-field>-->
+        <!--<mat-form-field class="formPadding">-->
+          <!--<input matInput placeholder="Email" [(ngModel)] = "user.email" type="text">-->
+        <!--</mat-form-field>-->
+      <!--</div>-->
+      <!--<mat-dialog-actions>-->
+        <!--<button mat-button class="xactButton" (click)="saveAndUpdate()">SAVE CHANGES</button>-->
+        <!--<button mat-button class="xactButton" [routerLink]= "['/auth/ridealong']">CREATE RIDE ALONG OFFER</button>-->
+      <!--</mat-dialog-actions>-->
+    <!--</mat-card>-->
+  <!--</mat-card>-->
+
+<!--</div>-->
