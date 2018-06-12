@@ -16,6 +16,7 @@ import {FormsModule} from '@angular/forms';
 import {AngularFirestoreModule} from 'angularfire2/firestore';
 import {AngularFireModule} from 'angularfire2';
 import {environment} from '../environments/environment';
+import {AngularFireAuthModule} from 'angularfire2/auth';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import {environment} from '../environments/environment';
     MatCardModule,
     AngularFireModule.initializeApp(environment.firebase, 'Fads2'),
     AngularFirestoreModule,
+    AngularFireAuthModule,
     MatFormFieldModule,
     FormsModule,
     MatInputModule,
