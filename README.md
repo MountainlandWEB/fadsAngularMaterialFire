@@ -1,3 +1,11 @@
+You will need to update `environment.ts` to your own FireBase info.
+
+Products page will load data from Firebase.
+(Make sure your data fits the model the front end is expecting.)
+
+Home page will log in via a Google pop-up.
+(Make sure you have enabled Google as a log in option in your Firebase project)
+
 # Fads
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.7.
