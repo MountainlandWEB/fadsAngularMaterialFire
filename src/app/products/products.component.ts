@@ -10,7 +10,7 @@ export interface Product {
   color: string;
 }
 export interface ProductId extends Product{
-  id: string
+  id: string;
 }
 
 @Component({

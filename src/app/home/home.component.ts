@@ -17,7 +17,14 @@ export class HomeComponent implements OnInit {
   }
 
   login(){
-    this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider());
+    let provider = new auth.GoogleAuthProvider();
+    provider.addScope('profile');
+    provider.addScope('email');
+    this.afAuth.auth.signInWithPopup(provider)
+      .then(function(result){
+        let newUser = result.user;
+        console.log(newUser);
+      });
   }
 
   logout(){
