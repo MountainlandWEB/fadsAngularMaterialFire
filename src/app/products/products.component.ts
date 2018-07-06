@@ -31,7 +31,8 @@ export class ProductsComponent implements OnInit {
         const id = a.payload.doc.id;
         return { id, ...data };
       }))
-    )
+    );
+    console.log(this.products);
   }
 
   ngOnInit() {
